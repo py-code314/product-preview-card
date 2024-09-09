@@ -2,35 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Product preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  Perfume
-
-  Gabrielle Essence Eau De Parfum
-
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
-
-  $149.99
-  $169.99
-
-  Add to Cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <main>
+    <div class="product-card">
+      <div class="procut-card__image">
+        <picture>
+          <source srcset="./images/image-product-desktop.jpg" media="(min-width: 768px)" width="229" height="345">
+          <img src="./images/image-product-mobile.jpg" alt="A glass bottle of Gabrielle Chanel perfume sits on a white surface surrounded by green leaves" width="337" height="240">
+        </picture>
+      </div>
+      <div class="product-card__content">
+        <hgroup>
+          <p class="product-card__ribbon">Perfume</p>
+          <h2 id="product-card__title" class="product-card__title">Gabrielle Essence Eau De Parfum</h2>
+        </hgroup>
+        <p class="product-card__description">
+          A floral, solar and voluptuous interpretation composed by Olivier Polge,
+          Perfumer-Creator for the House of CHANEL.
+        </p>
+        <p class="product-card__prices">
+          <span class="product-card__current-price">$149.99</span>
+          <del>$169.99</del>
+        </p>
+        <button type="button" class="product-card__btn" aria-describedby="product-card__title">Add to Cart</button>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
