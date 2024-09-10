@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Product preview card component</title>
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
 
@@ -12,8 +13,8 @@
     <div class="product-card">
       <div class="procut-card__image">
         <picture>
-          <source srcset="./images/image-product-desktop.jpg" media="(min-width: 768px)" width="229" height="345">
-          <img src="./images/image-product-mobile.jpg" alt="A glass bottle of Gabrielle Chanel perfume sits on a white surface surrounded by green leaves" width="337" height="240">
+          <!-- <source srcset="./images/image-product-desktop.jpg" media="(min-width: 768px)" width="300" height="450"> -->
+          <img src="./images/image-product-mobile.jpg" alt="A glass bottle of Gabrielle Chanel perfume sits on a white surface surrounded by green leaves" width="343" >
         </picture>
       </div>
       <div class="product-card__content">
@@ -26,10 +27,12 @@
           Perfumer-Creator for the House of CHANEL.
         </p>
         <p class="product-card__prices">
-          <span class="product-card__current-price">$149.99</span>
+          <span class="product-card__price">$149.99</span>
           <del>$169.99</del>
         </p>
-        <button type="button" class="product-card__btn" aria-describedby="product-card__title">Add to Cart</button>
+        <button type="button" class="product-card__btn" aria-describedby="product-card__title">
+          <img src="./images/icon-cart.svg" alt="">
+          <span>Add to Cart</span></button>
       </div>
     </div>
   </main>
