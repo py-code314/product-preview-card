@@ -151,8 +151,16 @@ body {
   background-color: hsl(158, 36%, 37%);
   color: hsl(0, 0%, 100%);
   font-weight: 700;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.75rem;
+}
+.product-card__btn:active {
+  background-color: hsl(212, 21%, 14%);
+}
+.product-card__btn:hover, .product-card__btn:focus {
+  background-color: #4da383;
+  outline: 3px solid black;
 }/*# sourceMappingURL=styles.css.map */
