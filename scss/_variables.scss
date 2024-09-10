@@ -6,9 +6,9 @@ $card-text-clr: hsl(228, 12%, 48%);
 $btn-clr: hsl(158, 36%, 37%);
 $btn-clr-active: hsl(212, 21%, 14%);
 
-$fs-sm: 12px;
-$fs-md: 14px;
-$fs-lg: 32px;
+$fs-sm: 0.75rem; // 12px
+$fs-md: 0.875rem; // 14px
+$fs-lg: 2rem; // 32px
 
 
 $ff-title: "Fraunces", serif;
@@ -18,18 +18,18 @@ $fw-regular: 400;
 $fw-medium: 500;
 $fw-bold: 700;
 
-$space-sm: 12px;
-$space-md: 16px;
-$space-lg: 18px;
-$space-xl: 20px;
-$space-2xl: 24px;
-$space-3xl: 32px;
+$space-sm: 0.75rem; // 12px
+$space-md: 1rem; // 16px
+$space-lg: 1.125rem; // 18px
+$space-xl: 1.25rem; // 20px
+$space-2xl: 1.5rem; // 24px
+$space-3xl: 2rem; // 32px
 
-$border-radius-sm: 8px;
-$border-radius-md: 12px;
+$border-radius-sm: 0.5rem; // 8px
+$border-radius-md: 0.75rem; // 12px
 
-$card-width-desktop: 600px;
-$card-width-mobile: 345px;
+$card-width-desktop: 37.5rem; // 600px
+$card-width-mobile: 21.4375rem; // 343px
 
 
 
