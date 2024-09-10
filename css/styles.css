@@ -157,10 +157,10 @@ body {
   align-items: center;
   gap: 0.75rem;
 }
-.product-card__btn:active {
-  background-color: hsl(212, 21%, 14%);
-}
 .product-card__btn:hover, .product-card__btn:focus {
   background-color: #4da383;
   outline: 3px solid black;
+}
+.product-card__btn:active {
+  background-color: hsl(212, 21%, 14%);
 }/*# sourceMappingURL=styles.css.map */
