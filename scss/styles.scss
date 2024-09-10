@@ -10,14 +10,13 @@ body {
 
 .product-card {
   max-inline-size: $card-width-mobile;
-  // border: 1px solid #d02323;
   border-radius: $border-radius-md;
   overflow: hidden;
 }
 
 .product-card__content {
   background-color: $card-bg-clr;
-  padding: $space-2xl; //dc
+  padding: $space-2xl; 
   color: $card-text-clr;
   font: {
     family: $ff-body;
@@ -57,7 +56,6 @@ body {
   display: flex;
   align-items: center;
   gap: $space-lg;
-  // @include flex;
 
   .product-card__price {
   font: {
@@ -68,7 +66,7 @@ body {
   }
 
   del {
-    font-size: 14px;
+    font-size: $fs-md;
     letter-spacing: -0.03em;
     position: relative;
   }
@@ -76,22 +74,18 @@ body {
   @include sr-only ('[deletion start]', before);
 
   @include sr-only ('[deletion end]', after);
-  
-  
-
 }
 
 .product-card__btn {
   display: block;
   width: 100%;
-  padding: 14px 0;
+  padding: 1em 0;
   border-radius: $border-radius-sm;
   border: none;
   background-color: $btn-clr;
   color: $card-bg-clr;
   font-weight: $fw-bold;
   @include flex-center($space-sm);
-  // gap: $space-sm;
 }
 
 
