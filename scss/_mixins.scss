@@ -32,3 +32,17 @@
   font-weight: $fw-bold;
   cursor: pointer;
 }
+
+@mixin btn-active {
+  &:active {
+    background-color: $btn-clr-active;
+  }
+}
+
+@mixin btn-hover {
+  &:hover,
+  &:focus {
+    background-color: lighten($btn-clr, 10%);
+    outline: 3px solid black;
+  }
+}
