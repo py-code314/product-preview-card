@@ -3,7 +3,7 @@
 @use './mixins' as *;
 
 body {
-  @include flex;
+  @include flex-center();
   background-color: $bg-clr; 
   min-height: 100svh;
 }
@@ -19,10 +19,11 @@ body {
   background-color: $card-bg-clr;
   padding: $space-2xl; //dc
   color: $card-text-clr;
-  font-family: $ff-body;
-  font-weight: $fw-medium;
-  font-size: $fs-md;
-
+  font: {
+    family: $ff-body;
+    weight: $fw-medium;
+    size: $fs-md;
+  }
 }
 
 .product-card__ribbon {
@@ -32,12 +33,16 @@ body {
 }
 
 .product-card__title {
-  font-family: $ff-title;
-  font-size: $fs-lg;
+  font: {
+    family: $ff-title;
+    size: $fs-lg;
+  }
   color: black;
   line-height: 1;
-  margin-block-start: $space-sm;
-  margin-block-end: $space-md;
+  margin-block: {
+    start: $space-sm;
+    end: $space-md;
+  }
 }
 
 .product-card__description {
@@ -45,26 +50,35 @@ body {
 }
 
 .product-card__prices {
-  margin-block-start: $space-md;
-  margin-block-end: $space-sm;
+  margin-block: {
+    start: $space-md;
+    end: $space-sm;
+  }
   display: flex;
   align-items: center;
   gap: $space-lg;
   // @include flex;
 
   .product-card__price {
-  font-size: $fs-lg;
-  font-family: $ff-title;
+  font: {
+    size: $fs-lg;
+    family: $ff-title;
+  }
   color: $btn-clr;
-  // flex: 1;
   }
 
   del {
-    // flex: 1;
     font-size: 14px;
     letter-spacing: -0.03em;
-    // line-height: 1;
+    position: relative;
   }
+
+  @include sr-only ('[deletion start]', before);
+
+  @include sr-only ('[deletion end]', after);
+  
+  
+
 }
 
 .product-card__btn {
@@ -76,8 +90,8 @@ body {
   background-color: $btn-clr;
   color: $card-bg-clr;
   font-weight: $fw-bold;
-  @include flex;
-  gap: $space-sm;
+  @include flex-center($space-sm);
+  // gap: $space-sm;
 }
 
 
