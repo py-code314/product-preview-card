@@ -49,19 +49,21 @@ body {
   margin-block-end: $space-sm;
   display: flex;
   align-items: center;
+  gap: $space-lg;
   // @include flex;
 
   .product-card__price {
   font-size: $fs-lg;
   font-family: $ff-title;
   color: $btn-clr;
-  flex: 1;
+  // flex: 1;
   }
 
   del {
-    flex: 1;
-    // font-size: $fs-sm;
-    letter-spacing: 0.1px;
+    // flex: 1;
+    font-size: 14px;
+    letter-spacing: -0.03em;
+    // line-height: 1;
   }
 }
 
@@ -74,5 +76,9 @@ body {
   background-color: $btn-clr;
   color: $card-bg-clr;
   font-weight: $fw-bold;
+  @include flex;
+  gap: $space-sm;
 }
+
+
 
