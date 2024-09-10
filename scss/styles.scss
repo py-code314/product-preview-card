@@ -6,6 +6,7 @@ body {
   @include flex-center();
   background-color: $bg-clr; 
   min-height: 100svh;
+  padding: 1rem;
 }
 
 .product-card {
