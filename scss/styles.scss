@@ -110,6 +110,7 @@ body {
 .product-card__btn {
 	@include card-btn();
 	@include flex-center($space-sm);
-  @include btn-active;
   @include btn-hover;
+  @include btn-active;
+  
 }
