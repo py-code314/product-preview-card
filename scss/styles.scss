@@ -1,0 +1,78 @@
+@use './reset';
+@use './variables' as *;
+@use './mixins' as *;
+
+body {
+  @include flex;
+  background-color: $bg-clr; 
+  min-height: 100svh;
+}
+
+.product-card {
+  max-inline-size: $card-width-mobile;
+  // border: 1px solid #d02323;
+  border-radius: $border-radius-md;
+  overflow: hidden;
+}
+
+.product-card__content {
+  background-color: $card-bg-clr;
+  padding: $space-2xl; //dc
+  color: $card-text-clr;
+  font-family: $ff-body;
+  font-weight: $fw-medium;
+  font-size: $fs-md;
+
+}
+
+.product-card__ribbon {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: $fs-sm;
+}
+
+.product-card__title {
+  font-family: $ff-title;
+  font-size: $fs-lg;
+  color: black;
+  line-height: 1;
+  margin-block-start: $space-sm;
+  margin-block-end: $space-md;
+}
+
+.product-card__description {
+  line-height: 1.6;
+}
+
+.product-card__prices {
+  margin-block-start: $space-md;
+  margin-block-end: $space-sm;
+  display: flex;
+  align-items: center;
+  // @include flex;
+
+  .product-card__price {
+  font-size: $fs-lg;
+  font-family: $ff-title;
+  color: $btn-clr;
+  flex: 1;
+  }
+
+  del {
+    flex: 1;
+    // font-size: $fs-sm;
+    letter-spacing: 0.1px;
+  }
+}
+
+.product-card__btn {
+  display: block;
+  width: 100%;
+  padding: 14px 0;
+  border-radius: $border-radius-sm;
+  border: none;
+  background-color: $btn-clr;
+  color: $card-bg-clr;
+  font-weight: $fw-bold;
+}
+
