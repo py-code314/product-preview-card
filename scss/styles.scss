@@ -3,130 +3,111 @@
 @use './mixins' as *;
 
 body {
-  @include flex-center();
-  background-color: $bg-clr; 
-  min-height: 100svh;
-  padding: 1rem;
+	@include flex-center();
+	background-color: $bg-clr;
+	min-height: 100svh;
+	padding: 1rem;
 }
 
 .product-card {
-  max-inline-size: $card-width-mobile;
-  border-radius: $border-radius-md;
-  overflow: hidden;
+	max-inline-size: $card-width-mobile;
+	border-radius: $border-radius-md;
+	overflow: hidden;
 
-  @media (min-width: 48em) {
-    display: flex;
-    max-inline-size: $card-width-desktop;
-  }
+	@media (min-width: 48em) {
+		display: flex;
+		max-inline-size: $card-width-desktop;
+	}
 }
 
 .product-card__image {
-  @media (min-width: 48em) {
-    width: 300px;
-    flex-shrink: 0;
-  }
+	@media (min-width: 48em) {
+		width: 300px;
+		flex-shrink: 0;
+	}
 }
 
 .product-card__content {
-  background-color: $card-bg-clr;
-  padding: $space-2xl; 
-  color: $card-text-clr;
-  font: {
-    family: $ff-body;
-    weight: $fw-medium;
-    size: $fs-md;
-  }
+	background-color: $card-bg-clr;
+	padding: $space-2xl;
+	color: $card-text-clr;
+	font: {
+		family: $ff-body;
+		weight: $fw-medium;
+		size: $fs-md;
+	}
 
-  @media (min-width: 48em) {
-    padding: $space-3xl
-  }
+	@media (min-width: 48em) {
+		padding: $space-3xl;
+	}
 }
 
 .product-card__ribbon {
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  font-size: $fs-sm;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: $fs-sm;
 }
 
 .product-card__title {
-  font: {
-    family: $ff-title;
-    size: $fs-lg;
-  }
-  color: black;
-  line-height: 1;
-  margin-block: {
-    start: $space-sm;
-    end: $space-md;
-  }
+	font: {
+		family: $ff-title;
+		size: $fs-lg;
+	}
+	color: black;
+	line-height: 1;
+	margin-block: {
+		start: $space-sm;
+		end: $space-md;
+	}
 
-  @media (min-width: 48em) {
-    margin-block: {
-      start: $space-lg;
-      end: $space-2xl;
-    }
-  }
+	@media (min-width: 48em) {
+		margin-block: {
+			start: $space-lg;
+			end: $space-2xl;
+		}
+	}
 }
 
 .product-card__description {
-  line-height: 1.6;
-
-  // @media (min-width: 48em) {
-  //   line-height: 1.7;
-  // }
+	line-height: 1.6;
 }
 
 .product-card__prices {
-  margin-block: {
-    start: $space-md;
-    end: $space-sm;
-  }
+	margin-block: {
+		start: $space-md;
+		end: $space-sm;
+	}
 
-  @media (min-width: 48em) {
-    margin-block: {
-    start: $space-2xl;
-    end: $space-xl;
-    }
-  }
-  display: flex;
-  align-items: center;
-  gap: $space-lg;
+	@media (min-width: 48em) {
+		margin-block: {
+			start: $space-2xl;
+			end: $space-xl;
+		}
+	}
+	display: flex;
+	align-items: center;
+	gap: $space-lg;
 
-  .product-card__price {
-  font: {
-    size: $fs-lg;
-    family: $ff-title;
-  }
-  color: $btn-clr;
-  }
+	.product-card__price {
+		font: {
+			size: $fs-lg;
+			family: $ff-title;
+		}
+		color: $btn-clr;
+	}
 
-  del {
-    font-size: $fs-md;
-    letter-spacing: -0.03em;
-    position: relative;
-  }
+	del {
+		font-size: $fs-md;
+		letter-spacing: -0.03em;
+		position: relative;
+	}
 
-  @include sr-only ('[deletion start]', before);
+	@include sr-only('[deletion start]', before);
 
-  @include sr-only ('[deletion end]', after);
+	@include sr-only('[deletion end]', after);
 }
 
 .product-card__btn {
-  display: block;
-  width: 100%;
-  padding: 1em 0;
-  border-radius: $border-radius-sm;
-  border: none;
-  background-color: $btn-clr;
-  color: $card-bg-clr;
-  font-weight: $fw-bold;
-  @include flex-center($space-sm);
+	@include card-btn();
+	@include flex-center($space-sm);
 }
-
-// @media (min-width: 750px) {
-//   .product-card__image {
-//     width: 300px;
-//     flex-shrink: 0;
-//   }
-// }
-
