@@ -1,13 +1,14 @@
 @use './variables' as *;
 
+// Center using flexbox
 @mixin flex-center($gap: 0) {
 	display: flex;
 	justify-content: center;
 	align-items: center;
   gap: $gap;
-	// min-height: 100svh;
 }
 
+// Code for sr-only
 @mixin sr-only($content: '', $location) {
 	del::#{$location} {
 		content: $content;
@@ -21,6 +22,7 @@
 	}
 }
 
+// Card button styles
 @mixin card-btn() {
   display: block;
   width: 100%;

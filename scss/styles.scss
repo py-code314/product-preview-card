@@ -1,7 +1,9 @@
+// Import partials
 @use './reset';
 @use './variables' as *;
 @use './mixins' as *;
 
+/* Styles for body */
 body {
 	@include flex-center();
 	background-color: $bg-clr;
@@ -9,24 +11,26 @@ body {
 	padding: 1rem;
 }
 
+/* Styles for card */
 .product-card {
 	max-inline-size: $card-width-mobile;
 	border-radius: $border-radius-md;
 	overflow: hidden;
 
+  // Media query for desktop
 	@media (min-width: 48em) { 
+    
 		max-inline-size: $card-width-desktop;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 	}
 }
 
+/* Image styles for desktop */
 .product-card__image {
 	@media (min-width: 48em) {
     display: grid;
-		place-items: center;
-
-    
+		place-items: center;   
 	}
 }
 
@@ -37,6 +41,7 @@ body {
   
 }
 
+/* Styles for content */
 .product-card__content {
 	background-color: $card-bg-clr;
 	padding: $space-2xl;
@@ -47,8 +52,8 @@ body {
 		size: $fs-md;
 	}
 
-	@media (min-width: 48em) {
-    
+  // Media query for desktop
+	@media (min-width: 48em) {  
 		padding: $space-3xl;
 	}
 }
@@ -71,6 +76,7 @@ body {
 		end: $space-md;
 	}
 
+  // Media query for desktop
 	@media (min-width: 48em) {
 		margin-block: {
 			start: $space-lg;
@@ -83,12 +89,14 @@ body {
 	line-height: 1.6;
 }
 
+/* Styles for prices */
 .product-card__prices {
 	margin-block: {
 		start: $space-md;
 		end: $space-sm;
 	}
 
+  // Media query for desktop
 	@media (min-width: 48em) {
 		margin-block: {
 			start: $space-2xl;
@@ -113,11 +121,12 @@ body {
 		position: relative;
 	}
 
+  // Mixins for screen readers to read deleted text
 	@include sr-only('[deletion start]', before);
-
 	@include sr-only('[deletion end]', after);
 }
 
+/* CTA button  styles */
 .product-card__btn {
 	@include card-btn();
 	@include flex-center($space-sm);
