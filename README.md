@@ -8,6 +8,8 @@ This is a solution to the [Product preview card component challenge on Frontend 
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
     - [Screenshots](#screenshots)
+      - [Mobile view:](#mobile-view)
+      - [Desktop view:](#desktop-view)
     - [Links](#links)
     - [Built with](#built-with)
     - [What I learned](#what-i-learned)
@@ -20,10 +22,10 @@ A small project to build a product preview card component for a perfume bottle. 
 
 ### Screenshots
 
-Mobile view:
+#### Mobile view:
 ![](./images/screenshot-mobile.png)
 
-Desktop view:
+#### Desktop view:
 ![](./images/screenshot-desktop.png)
 
 
