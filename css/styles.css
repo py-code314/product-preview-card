@@ -127,13 +127,13 @@ body {
   font-family: "Fraunces", serif;
   color: hsl(158, 36%, 37%);
 }
-.product-card__prices del {
+.product-card__prices s {
   font-size: 0.875rem;
   letter-spacing: -0.03em;
   position: relative;
 }
-.product-card__prices del::before {
-  content: "[deletion start]";
+.product-card__prices s::before {
+  content: "[old price start]";
   position: absolute;
   -webkit-clip-path: inset(100%);
           clip-path: inset(100%);
@@ -143,8 +143,8 @@ body {
   overflow: hidden;
   white-space: nowrap;
 }
-.product-card__prices del::after {
-  content: "[deletion end]";
+.product-card__prices s::after {
+  content: "[old price end]";
   position: absolute;
   -webkit-clip-path: inset(100%);
           clip-path: inset(100%);
