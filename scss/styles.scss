@@ -120,10 +120,16 @@ body {
 		letter-spacing: -0.03em;
 		position: relative;
 	}
+}
 
-  // Mixins for screen readers to read strike-through text
-	@include sr-only('[old price start]', before);
-	@include sr-only('[old price end]', after);
+.sr-only {
+  position: absolute;
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 /* CTA button  styles */
