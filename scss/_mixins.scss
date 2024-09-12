@@ -8,20 +8,6 @@
   gap: $gap;
 }
 
-// Code for sr-only
-@mixin sr-only($content: '', $location) {
-	s::#{$location} {
-		content: $content;
-		position: absolute;
-		clip-path: inset(100%);
-		clip: rect(1px, 1px, 1px, 1px);
-		height: 1px;
-		width: 1px;
-		overflow: hidden;
-		white-space: nowrap;
-	}
-}
-
 // Card button styles
 @mixin card-btn() {
   display: block;
