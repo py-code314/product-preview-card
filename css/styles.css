@@ -132,19 +132,8 @@ body {
   letter-spacing: -0.03em;
   position: relative;
 }
-.product-card__prices s::before {
-  content: "[old price start]";
-  position: absolute;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.product-card__prices s::after {
-  content: "[old price end]";
+
+.sr-only {
   position: absolute;
   -webkit-clip-path: inset(100%);
           clip-path: inset(100%);
