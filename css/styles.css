@@ -122,7 +122,7 @@ body {
     margin-block-end: 1.25rem;
   }
 }
-.product-card__prices .product-card__price {
+.product-card__prices span {
   font-size: 2rem;
   font-family: "Fraunces", serif;
   color: hsl(158, 36%, 37%);
