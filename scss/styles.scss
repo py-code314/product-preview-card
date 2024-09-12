@@ -115,15 +115,15 @@ body {
 		color: $btn-clr;
 	}
 
-	del {
+	s {
 		font-size: $fs-md;
 		letter-spacing: -0.03em;
 		position: relative;
 	}
 
-  // Mixins for screen readers to read deleted text
-	@include sr-only('[deletion start]', before);
-	@include sr-only('[deletion end]', after);
+  // Mixins for screen readers to read strike-through text
+	@include sr-only('[old price start]', before);
+	@include sr-only('[old price end]', after);
 }
 
 /* CTA button  styles */
