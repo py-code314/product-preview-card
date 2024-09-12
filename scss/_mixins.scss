@@ -10,7 +10,7 @@
 
 // Code for sr-only
 @mixin sr-only($content: '', $location) {
-	del::#{$location} {
+	s::#{$location} {
 		content: $content;
 		position: absolute;
 		clip-path: inset(100%);
