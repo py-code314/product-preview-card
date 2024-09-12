@@ -107,7 +107,7 @@ body {
 	align-items: center;
 	gap: $space-lg;
 
-	.product-card__price {
+	span {
 		font: {
 			size: $fs-lg;
 			family: $ff-title;
